@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Course Manager Frontend (ReactJS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the frontend interface for the Course Manager system, built with ReactJS, Axios, and Bootstrap.
 
-## Available Scripts
+It supports role-based access, clean UI flows for students, teachers, and admins, and communicates with the FastAPI backend through secure APIs.
 
-In the project directory, you can run:
+🚀 Main Features
+🔐 Authentication
+Login with JWT token (stored in localStorage)
 
-### `npm start`
+Refresh token mechanism with session timeout modal
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Role-based redirects based on user type (Student, Teacher, Admin)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🧑‍🏫 Teacher Panel
+Create Courses
 
-### `npm test`
+Manage Courses (edit, delete own courses)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Add Lessons to courses
 
-### `npm run build`
+Create Quizzes inside lessons (multi-question quizzes)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+View Quiz Attempts and Analytics
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Create Attendance Sessions for lessons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Enroll Students manually to courses
 
-### `npm run eject`
+👨‍🎓 Student Panel
+Browse Course Catalog
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Enroll into Courses
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+View Enrolled Courses
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+View Lessons inside enrolled courses
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Attempt Quizzes (with limited attempts)
 
-## Learn More
+View Progress (lesson and course completion %)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Check-In for Attendance linked to lessons
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👑 Admin Panel
+Dashboard Overview (total users, courses, lessons)
 
-### Code Splitting
+Manage Users (list, search users, see roles)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Manage Courses (view, edit, delete any course)
 
-### Analyzing the Bundle Size
+View Course Details (students enrolled, lessons count)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+(Planned) Export users, courses, results to CSV
 
-### Making a Progressive Web App
+(Planned) Login Activity Logs for auditing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🛠 Technology Stack
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Layer	Technology
+Frontend	ReactJS
+HTTP Client	Axios
+UI Components	Bootstrap, React-Bootstrap
+Routing	React Router v6
+State Handling	useState, useEffect hooks
+Authentication	JWT with Authorization headers
